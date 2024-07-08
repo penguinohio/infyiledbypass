@@ -17,7 +17,7 @@ if not game:IsLoaded() then
 	notLoaded:Destroy()
 end
 
-currentVersion = "VM"
+currentVersion = "5.9.7"
 
 Holder = Instance.new("Frame")
 Title = Instance.new("TextLabel")
@@ -6313,7 +6313,7 @@ local TeleportCheck = false
 Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if KeepInfYield and (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
-		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()")
+		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/penguinohio/infyiledbypass/main/VM'))()")
 	end
 end)
 
@@ -6762,6 +6762,10 @@ addcmd("rejoin", {"rj"}, function(args, speaker)
 	else
 		TeleportService:TeleportToPlaceInstance(PlaceId, JobId, Players.LocalPlayer)
 	end
+end)
+
+addcmd("bok", {"bk"}, function(args, speaker)
+	print("bok")
 end)
 
 addcmd("autorejoin", {"autorj"}, function(args, speaker)
